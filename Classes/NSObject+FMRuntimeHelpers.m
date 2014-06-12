@@ -1,16 +1,16 @@
 //
-//  NSObject+RuntimeHelpers.m
+//  NSObject+FMRuntimeHelpers.m
 //  RuntimeHelpers
 //
 //  Created by Fernando Mazzon on 4/30/13.
 //  Copyright (c) 2013 Fernando Mazzon. All rights reserved.
 //
 
-#import "NSObject+RuntimeHelpers.h"
+#import "NSObject+FMRuntimeHelpers.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-@implementation NSObject (RuntimeHelpers)
+@implementation NSObject (FMRuntimeHelpers)
 
 + (NSArray *)subclasses
 {

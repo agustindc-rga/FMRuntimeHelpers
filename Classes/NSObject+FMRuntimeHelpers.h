@@ -1,12 +1,12 @@
 //
-//  NSObject+RuntimeHelpers.h
+//  NSObject+FMRuntimeHelpers.h
 //  RuntimeHelpers
 //
 //  Created by Fernando Mazzon on 4/30/13.
 //  Copyright (c) 2013 Fernando Mazzon. All rights reserved.
 //
 
-@interface NSObject (RuntimeHelpers)
+@interface NSObject (FMRuntimeHelpers)
 
 /**
  Returns an array of Class objects which are all subclasses to the NSObject class this is called on

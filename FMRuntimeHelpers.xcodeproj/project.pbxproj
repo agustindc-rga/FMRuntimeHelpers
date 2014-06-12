@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1FA31251730338D00A0E98B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FA31241730338D00A0E98B /* Foundation.framework */; };
-		E1FA31351730347C00A0E98B /* NSObject+RuntimeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA31341730347C00A0E98B /* NSObject+RuntimeHelpers.m */; };
+		E1FA31351730347C00A0E98B /* NSObject+FMRuntimeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA31341730347C00A0E98B /* NSObject+FMRuntimeHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,12 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E1FA31211730338D00A0E98B /* libRuntimeHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRuntimeHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FA31211730338D00A0E98B /* libFMRuntimeHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMRuntimeHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FA31241730338D00A0E98B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E1FA31281730338D00A0E98B /* RuntimeHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeHelpers-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		E1FA31321730344200A0E98B /* RuntimeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuntimeHelpers.h; path = Classes/RuntimeHelpers.h; sourceTree = SOURCE_ROOT; };
-		E1FA31331730347C00A0E98B /* NSObject+RuntimeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+RuntimeHelpers.h"; path = "Classes/NSObject+RuntimeHelpers.h"; sourceTree = SOURCE_ROOT; };
-		E1FA31341730347C00A0E98B /* NSObject+RuntimeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RuntimeHelpers.m"; path = "Classes/NSObject+RuntimeHelpers.m"; sourceTree = SOURCE_ROOT; };
+		E1FA31281730338D00A0E98B /* FMRuntimeHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMRuntimeHelpers-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E1FA31321730344200A0E98B /* FMRuntimeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMRuntimeHelpers.h; path = Classes/FMRuntimeHelpers.h; sourceTree = SOURCE_ROOT; };
+		E1FA31331730347C00A0E98B /* NSObject+FMRuntimeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+FMRuntimeHelpers.h"; path = "Classes/NSObject+FMRuntimeHelpers.h"; sourceTree = SOURCE_ROOT; };
+		E1FA31341730347C00A0E98B /* NSObject+FMRuntimeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FMRuntimeHelpers.m"; path = "Classes/NSObject+FMRuntimeHelpers.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 		E1FA31181730338D00A0E98B = {
 			isa = PBXGroup;
 			children = (
-				E1FA31261730338D00A0E98B /* RuntimeHelpers */,
+				E1FA31261730338D00A0E98B /* FMRuntimeHelpers */,
 				E1FA31231730338D00A0E98B /* Frameworks */,
 				E1FA31221730338D00A0E98B /* Products */,
 			);
@@ -56,7 +56,7 @@
 		E1FA31221730338D00A0E98B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1FA31211730338D00A0E98B /* libRuntimeHelpers.a */,
+				E1FA31211730338D00A0E98B /* libFMRuntimeHelpers.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,21 +69,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E1FA31261730338D00A0E98B /* RuntimeHelpers */ = {
+		E1FA31261730338D00A0E98B /* FMRuntimeHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				E1FA31321730344200A0E98B /* RuntimeHelpers.h */,
-				E1FA31331730347C00A0E98B /* NSObject+RuntimeHelpers.h */,
-				E1FA31341730347C00A0E98B /* NSObject+RuntimeHelpers.m */,
+				E1FA31321730344200A0E98B /* FMRuntimeHelpers.h */,
+				E1FA31331730347C00A0E98B /* NSObject+FMRuntimeHelpers.h */,
+				E1FA31341730347C00A0E98B /* NSObject+FMRuntimeHelpers.m */,
 				E1FA31271730338D00A0E98B /* Supporting Files */,
 			);
+			name = FMRuntimeHelpers;
 			path = RuntimeHelpers;
 			sourceTree = "<group>";
 		};
 		E1FA31271730338D00A0E98B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1FA31281730338D00A0E98B /* RuntimeHelpers-Prefix.pch */,
+				E1FA31281730338D00A0E98B /* FMRuntimeHelpers-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -91,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1FA31201730338D00A0E98B /* RuntimeHelpers */ = {
+		E1FA31201730338D00A0E98B /* FMRuntimeHelpers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1FA312F1730338D00A0E98B /* Build configuration list for PBXNativeTarget "RuntimeHelpers" */;
+			buildConfigurationList = E1FA312F1730338D00A0E98B /* Build configuration list for PBXNativeTarget "FMRuntimeHelpers" */;
 			buildPhases = (
 				E1FA311D1730338D00A0E98B /* Sources */,
 				E1FA311E1730338D00A0E98B /* Frameworks */,
@@ -103,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = RuntimeHelpers;
+			name = FMRuntimeHelpers;
 			productName = RuntimeHelpers;
-			productReference = E1FA31211730338D00A0E98B /* libRuntimeHelpers.a */;
+			productReference = E1FA31211730338D00A0E98B /* libFMRuntimeHelpers.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +118,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Fernando Mazzon";
 			};
-			buildConfigurationList = E1FA311C1730338D00A0E98B /* Build configuration list for PBXProject "RuntimeHelpers" */;
+			buildConfigurationList = E1FA311C1730338D00A0E98B /* Build configuration list for PBXProject "FMRuntimeHelpers" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -129,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1FA31201730338D00A0E98B /* RuntimeHelpers */,
+				E1FA31201730338D00A0E98B /* FMRuntimeHelpers */,
 			);
 		};
 /* End PBXProject section */
@@ -139,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1FA31351730347C00A0E98B /* NSObject+RuntimeHelpers.m in Sources */,
+				E1FA31351730347C00A0E98B /* NSObject+FMRuntimeHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +203,9 @@
 		E1FA31301730338D00A0E98B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/RuntimeHelpers.dst;
+				DSTROOT = /tmp/FMRuntimeHelpers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RuntimeHelpers-Prefix.pch";
+				GCC_PREFIX_HEADER = "FMRuntimeHelpers-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -214,9 +215,9 @@
 		E1FA31311730338D00A0E98B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/RuntimeHelpers.dst;
+				DSTROOT = /tmp/FMRuntimeHelpers.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RuntimeHelpers-Prefix.pch";
+				GCC_PREFIX_HEADER = "FMRuntimeHelpers-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -226,7 +227,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E1FA311C1730338D00A0E98B /* Build configuration list for PBXProject "RuntimeHelpers" */ = {
+		E1FA311C1730338D00A0E98B /* Build configuration list for PBXProject "FMRuntimeHelpers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1FA312D1730338D00A0E98B /* Debug */,
@@ -235,13 +236,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1FA312F1730338D00A0E98B /* Build configuration list for PBXNativeTarget "RuntimeHelpers" */ = {
+		E1FA312F1730338D00A0E98B /* Build configuration list for PBXNativeTarget "FMRuntimeHelpers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1FA31301730338D00A0E98B /* Debug */,
 				E1FA31311730338D00A0E98B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
