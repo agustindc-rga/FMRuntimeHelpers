@@ -81,16 +81,29 @@
 
 + (void)swizzleClassMethod:(SEL)originalSelector withReplacement:(SEL)replacementSelector
 {
-	Method originalMethod = class_getClassMethod([self class], originalSelector);
-	Method replacementMethod = class_getClassMethod([self class], replacementSelector);
-	method_exchangeImplementations(replacementMethod, originalMethod);
+	Method originalMethod = class_getClassMethod(self, originalSelector);
+	Method replacementMethod = class_getClassMethod(self, replacementSelector);
+  
+  // meta-class
+  Class cls = object_getClass((id)self);
+  
+  if (class_addMethod(cls, originalSelector, method_getImplementation(replacementMethod), method_getTypeEncoding(replacementMethod))) {
+    class_replaceMethod(cls, replacementSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+  } else {
+    method_exchangeImplementations(originalMethod, replacementMethod);
+  }
 }
 
 + (void)swizzleInstanceMethod:(SEL)originalSelector withReplacement:(SEL)replacementSelector
 {
-	Method originalMethod = class_getInstanceMethod([self class], originalSelector);
-	Method replacementMethod = class_getInstanceMethod([self class], replacementSelector);
-	method_exchangeImplementations(replacementMethod, originalMethod);
+	Method originalMethod = class_getInstanceMethod(self, originalSelector);
+	Method replacementMethod = class_getInstanceMethod(self, replacementSelector);
+  
+  if(class_addMethod(self, originalSelector, method_getImplementation(replacementMethod), method_getTypeEncoding(replacementMethod))) {
+    class_replaceMethod(self, replacementSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+  } else {
+    method_exchangeImplementations(originalMethod, replacementMethod);
+  }
 }
 
 + (BOOL)addInstanceMethod:(SEL)originalSelector method:(SEL)method
